@@ -1,1 +1,27 @@
+name: LuJiaXing
+spring:
+   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_cloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
 
+#logging:
+#  file: /rbac.log
+#  level:
+#    root: INFO
+#    com:
+#      ghy:
+#        login:
+#          mapper: debug
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
+  mapper-locations: classpath:mybatis/*.xml
+
+security:
+  oauth2:
+    resource:
+      id: cloud-pump-station
+      user-info-uri: http://localhost:8002/auth/javayh/member
+      prefer-token-info: false
