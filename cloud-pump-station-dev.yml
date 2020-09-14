@@ -2,7 +2,7 @@ name: LuJiaXing1111
 spring:
    datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring_cloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://192.168.0.21:3306/spring_cloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: root
 
@@ -23,5 +23,5 @@ security:
   oauth2:
     resource:
       id: cloud-pump-station
-      user-info-uri: http://localhost:8002/auth/javayh/member
+      user-info-uri: http://192.168.32.72:8002/auth/javayh/member
       prefer-token-info: false
